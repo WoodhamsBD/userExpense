@@ -1,0 +1,17 @@
+# dotenv environment variables file
+.env
+
+# Node
+# Logs
+logs
+*.log
+npm-debug.log
+
+# Runtime Data
+pids
+*.pids
+*.seed
+*.pid.lock
+
+build/release
+

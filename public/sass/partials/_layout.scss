@@ -1,0 +1,22 @@
+html {
+  font-size: 12px;
+}
+
+body {
+  background:#efefef;
+  &:before {
+    content: '';
+    display: block;
+    background: $grad;
+    height: 10px;
+    width: 100%;
+  }
+}
+
+.inner {
+  max-width:900px;
+  margin: 0 auto;
+  @media all and (max-width: 900px) {
+    padding: 2rem;
+  }
+}
