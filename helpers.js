@@ -12,7 +12,7 @@ exports.moment = require('moment');
 exports.dump = (obj) => JSON.stringify(obj, null, 2);
 
 // Some details about the site
-exports.siteName = `User Skelly`;
+exports.siteName = `User Expense`;
 
 exports.menu = [
   {slug: '/'}

@@ -2,5 +2,5 @@
 
 // Static Pages
 exports.homepage = (req, res) => {
-  res.render('index');
+  res.render('index', {title: 'Home'});
 };
