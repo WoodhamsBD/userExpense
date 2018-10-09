@@ -1,5 +1,4 @@
 const { catchErrors } = require('../handlers/errorHandlers');
-
 const express = require('express');
 const router = express.Router();
 
@@ -35,6 +34,12 @@ router.post('/account/reset/:token',
   authController.confirmedPasswords,
   catchErrors(authController.update)
 );
+
+// Home
+router.get('/home', userController.home);
+
+// Search routes
+
 
 
 module.exports = router;

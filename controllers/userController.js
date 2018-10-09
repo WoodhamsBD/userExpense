@@ -59,3 +59,10 @@ exports.updateAccount = async (req, res) => {
   req.flash('success', 'Account updated!');
   res.redirect('back');
 };
+
+// Home Actions
+exports.home = (req, res) => {
+  res.render('home', {
+    title: 'Home'
+  });
+};

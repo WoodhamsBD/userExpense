@@ -6,17 +6,28 @@ body {
   background:#efefef;
   &:before {
     content: '';
-    display: block;
+    display: grid;
     background: $grad;
     height: 10px;
     width: 100%;
   }
 }
 
+// Pre logged in simple centering
 .inner {
   max-width:900px;
   margin: 0 auto;
   @media all and (max-width: 900px) {
     padding: 2rem;
   }
+}
+
+// Logged in User - redirect location
+.homeContent {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 10% 1fr 1fr;
+    grid-gap: 10px;
+    grid-template-areas: ". . . . ."". . . . ."". . . . .";
 }

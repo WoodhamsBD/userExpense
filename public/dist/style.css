@@ -6,7 +6,8 @@ body {
   background: #efefef; }
   body:before {
     content: '';
-    display: block;
+    display: -ms-grid;
+    display: grid;
     background: linear-gradient(#33ccff, #004d66);
     height: 10px;
     width: 100%; }
@@ -17,6 +18,17 @@ body {
   @media all and (max-width: 900px) {
     .inner {
       padding: 2rem; } }
+
+.homeContent {
+  display: -ms-grid;
+  display: grid;
+  height: 100%;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 10% 1fr 1fr;
+      grid-template-rows: 10% 1fr 1fr;
+  grid-gap: 10px;
+  grid-template-areas: ". . . . ." ". . . . ." ". . . . ."; }
 
 html {
   box-sizing: border-box; }
@@ -747,5 +759,33 @@ pre.error {
   background: white;
   line-height: 3;
   white-space: pre-line; }
+
+.rightBar {
+  -ms-grid-column: 5;
+      grid-column-start: 5;
+  grid-column-end: 5;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  grid-row-end: 3; }
+
+.leftBar {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 1;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  grid-row-end: 1;
+  justify-self: center; }
+  .leftBar__search {
+    -ms-flex-pack: center;
+        justify-content: center; }
+
+.mainHome {
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  grid-column-end: 5;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  grid-row-end: 4; }
 
 /*# sourceMappingURL=style.css.map*/
