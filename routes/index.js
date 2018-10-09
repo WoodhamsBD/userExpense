@@ -7,6 +7,7 @@ const staticController = require('../controllers/staticController');
 const userController = require('../controllers/userController');
 const authController = require('../controllers/authController');
 
+
 // Routes
 
 // Homepage
@@ -38,7 +39,7 @@ router.post('/account/reset/:token',
 // Home
 router.get('/home', userController.home);
 
-// Search routes
+// Expense Routes
 
 
 
