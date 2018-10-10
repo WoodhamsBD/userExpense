@@ -6,6 +6,7 @@ const router = express.Router();
 const staticController = require('../controllers/staticController');
 const userController = require('../controllers/userController');
 const authController = require('../controllers/authController');
+const expenseController = require('../controllers/expenseController');
 
 
 // Routes
@@ -40,7 +41,9 @@ router.post('/account/reset/:token',
 router.get('/home', userController.home);
 
 // Expense Routes
+router.get('/addExpense', authController.loggedIn, expenseController.addExpense);
+router.post('/addExpense', catchErrors(expenseController.createExpense));
 
-
+router.get('/expenses', authController.loggedIn, catchErrors(expenseController.getExpenses));
 
 module.exports = router;

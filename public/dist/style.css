@@ -788,4 +788,9 @@ pre.error {
       grid-row-start: 1;
   grid-row-end: 4; }
 
+.expenseEdit {
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  grid-column-end: 4; }
+
 /*# sourceMappingURL=style.css.map*/

@@ -1,0 +1,12 @@
+mixin expenseForm(expense = {})
+  form(action=`/addExpense/${expense._id || ''}` method="POST" class="card")
+    label(for="name") Name
+    input(type="text" name="name" value=expense.name)
+
+    label(for="cost") Cost
+    input(type="number" name="cost" value=expense.cost)
+
+    label(for="description") Description
+    textarea(name="description", cols="30", rows="10")=expense.description
+
+    input(type="submit" value="Save" class="button")

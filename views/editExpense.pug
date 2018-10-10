@@ -1,0 +1,9 @@
+extends layout
+
+include mixins/_expenseForm
+
+block content
+  .homeContent
+    .expenseEdit
+      h2= title
+      +expenseForm(expense)
