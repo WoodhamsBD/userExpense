@@ -4,9 +4,9 @@ mixin expenseForm(expense = {})
     input(type="text" name="name" value=expense.name)
 
     label(for="cost") Cost
-    input(type="number" name="cost" value=expense.cost)
+    input(type="number" step="0.01" placeholder="0.00" name="cost")=expense.cost
 
     label(for="description") Description
-    textarea(name="description", cols="30", rows="10")=expense.description
+    textarea(name="description", cols="20", rows="5")=expense.description
 
     input(type="submit" value="Save" class="button")
