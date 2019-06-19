@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 const Expense = mongoose.model('Expense');
 
-
 // Actions
 exports.addExpense = (req,res) => {
   res.render('editExpense', {title: 'Add Expense'});
